@@ -1,0 +1,11 @@
+{% macro input(label, name, type, value) %}
+  {% if label == false %}
+  {% else %}
+    <label for="{{ label }}">{{ label }}</label>
+  {% endif %}
+  <input type="{{ type|default('text')}}" name="{{ name }}" value="{{ value|default("")}}" />
+{% endmacro %}
+
+{% macro button(name) %}
+  <button role="button" name="{{ name }}" id="{{ name }}"> {{ name }} </button>
+{% endmacro %}

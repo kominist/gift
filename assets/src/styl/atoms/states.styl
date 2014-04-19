@@ -1,0 +1,43 @@
+/*
+ *  states
+ *  type : page
+ *
+ *  it should explicitly shows the state
+ *    with no doubts about the colors
+ *  it should tell that it's hoverable
+ *  it should inform about the state if hovered
+ */
+
+// General  style
+
+.state:hover
+  cursor pointer
+
+.state:hover:after
+  background #1a1a1a
+  color #eee
+  padding 0.5em
+  margin 0 0 0 1.1em
+  border-radius 2px
+
+// State specific style
+.initialized
+  color #00cbe7
+
+.initialized:hover:after
+  content "initialisé"
+
+.accepted
+  color #7cec14
+
+.accepted:hover:after
+  content "accepté"
+
+.refused
+  color #ec1c14
+
+.refused:hover:after
+  content "refusé"
+
+.state-global
+  color #826c5b

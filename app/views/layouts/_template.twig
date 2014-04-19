@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "layouts/head.twig" ignore missing %}
+  </head>
+  <body>
+    <div id="page">
+      {% include "layouts/header.twig" ignore missing %}
+      {% block content %}
+      {% endblock %}
+      {% include "layouts/scripts.twig" %}
+      {% include "layouts/footer.twig" %}
+    </div>
+  </body>
+</html>

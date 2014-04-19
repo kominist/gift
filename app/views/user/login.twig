@@ -1,0 +1,21 @@
+{#login form#}
+
+{% import "macros/form.twig" as form %}
+<div id="register">
+  <h1>
+    S'enregistrer
+  </h1>
+  {{ form.input("pseudo", "register_nick", "text") }}
+  {{ form.input("mot de passe", "register_password", "password") }}
+  {{ form.input("adresse courriel", "email", "mail") }}
+  {{ form.button("register")}}
+</div>
+
+<div id="login">
+  <h1>
+    Se connecter
+  </h1>
+  {{ form.input("pseudo", "login_nick", "text") }}
+  {{ form.input("mot de passe", "login_password", "password") }}
+  {{ form.button("login")}}
+</div>

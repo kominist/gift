@@ -1,0 +1,5 @@
+define [
+
+], (() ->
+  console.log "initied"
+)

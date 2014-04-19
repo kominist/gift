@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend test specs",
+  "main": "testRunner.html",
+  "scripts": {
+    "test": "mocha-phantomjs testRunner.html"
+  },
+  "author": "r+",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-coffeelint": "0.0.10"
+  }
+}

@@ -1,0 +1,11 @@
+db/
+db/*
+composer.lock
+vendor/
+bin/*
+assets/node_modules/
+assets/dist/
+test/frontend/node_modules/
+logs/*
+!test/bootstrap.php
+todo.md

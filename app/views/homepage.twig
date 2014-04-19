@@ -1,0 +1,29 @@
+{% extends "layouts/_template.twig" %}
+
+{% block content %}
+  <div id="description" class="half">
+    <p>
+      <strong>Cadeaumity</strong> permet de donner et reçevoir
+      des cadeaux sur <a href="http://komity.net" tabindex=1>komity</a>.
+    </p>
+  </div>
+
+  <section id="content">
+    <div id="init">initializing..</div>
+    <div id="login" class="half"></div>
+    <div id="search"></div>
+    <div id="result" class="half"></div>
+    <div id="gifts" class="half"></div>
+  </section>
+
+  {% include "templates/user-view.twig" %}
+  {% include "templates/user-empty-view.twig" %}
+  {% include "templates/gift-search.twig" %}
+  {% include "templates/gift-view.twig" %}
+  {% include "templates/gift-view-current-giver.twig" %}
+  {% include "templates/gift-view-current-getter.twig" %}
+  {% include "templates/gift-empty-view.twig" %}
+  {% include "templates/search-result.twig" %}
+
+{% endblock %}
+
