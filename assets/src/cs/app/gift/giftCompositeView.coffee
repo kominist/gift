@@ -36,10 +36,11 @@ define [
       "change" : "collectionChanged"
 
     modelChanged : ->
-      if @model.save() is false
-        console.log @model.validationError
-      else
-        console.log @model.save()
+      saved = @model.save(
+        {},
+        success : (model, response)=>
+          @collection.reset response
+      )
       @render()
 
     collectionChanged : ->

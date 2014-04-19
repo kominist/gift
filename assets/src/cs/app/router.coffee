@@ -50,7 +50,7 @@ define [
     giftCollection.on "sync", =>
       @filters = new GiftCompositeView(
         collection : giftCollection,
-        model : new SearchGiftModel(filterOn : "lambda")
+        model : new SearchGiftModel(filterOn : false)
       )
       @filters.setUser(@user.model.get("username"))
       @giftList.show(@filters.render())

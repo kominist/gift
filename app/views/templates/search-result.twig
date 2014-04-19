@@ -1,5 +1,7 @@
 <script type="text/template" id="search-result" charset="utf-8">
-  <div><%= filterOn  %></div>
+  <% if (filterOn  && filterOn != null) { %>
+    <div><i class="fa fa-filter"></i> résultats pour :  <%= filterOn  %></div>
+  <% } %>
   <ul id="suggestions">
   </ul>
 </script>
