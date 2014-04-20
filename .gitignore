@@ -1,7 +1,6 @@
 db/
-db/*
 composer.lock
-vendor/*
+vendor/
 bin/*
 assets/node_modules/*
 assets/dist/
