@@ -1,5 +1,4 @@
 install:
-	composer update
 	composer install --no-progress
 	mkdir -p db logs
 	touch db/db.sqlite
@@ -8,12 +7,19 @@ install:
 	chmod -R 777 logs
 	mkdir -p assets/node_modules
 	npm install ./assets --prefix ./assets/node_modules/
-	npm install -g grunt-cli
+	npm install -g grunt-cli yuidoc
 	grunt --base ./assets --gruntfile ./assets/gruntfile.coffee
 	grunt css --base ./assets --gruntfile ./assets/gruntfile.coffee
 	grunt vendor --base ./assets --gruntfile ./assets/gruntfile.coffee
 	bin/phpmig --init
 	bin/phpmig migrate
+
+documentation :
+	yuidoc assets/dist/js -o docs/frontend/
+	./bin/phpdoc.php -d app/ -t ./docs/backend/
+
+update :
+	composer update
 
 test:
 	mkdir -p logs

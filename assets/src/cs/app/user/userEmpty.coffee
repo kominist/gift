@@ -44,20 +44,62 @@ define [
       # Password input for registering
       #
       # @property ui.registerPassword
-      # @default input[name=register-pwd]
+      # @default "input[name=register-pwd]"
       # @type String
       ###
       registerPassword : "input[name=register-pwd]"
 
-
+      ###*
+      # Mail input for registering
+      #
+      # @property ui.registerMail
+      # @default "input[name=register-mail]"
+      # @type String
+      ###
       registerMail : "input[name=register-mail]"
+
+      ###*
+      # Mail input for login
+      #
+      # @property ui.loginMail
+      # @default "input[name=login-mail]"
+      # @type String
+      ###
       loginMail : "input[name=login-mail]"
+
+      ###*
+      # Password input for login
+      #
+      # @property ui.loginPassword
+      # @default "input[name=login-pwd]"
+      # @type String
+      ###
       loginPassword : "input[name=login-pwd]"
 
+    # Bind events to methods
     events :
-      'click button#register' : "doRegister"
-      'click button#login' : "doLogin"
 
+      ###*
+      # Fire when a user filled the form and
+      # want to register
+      #
+      # @event click:doRegister
+      ###
+      'click button#register' : "doRegister"
+
+      ###*
+      # Fire when a user filled the form and
+      # want to login
+      #
+      # @event click:doLogin
+      ###
+      'click button#login' : "doLogin"
+    ###*
+    # Register a user
+    #
+    # @method doRegister
+    # @param {Object} jquery.event
+    ###
     doRegister : (e) ->
       e.preventDefault()
       @model.set(username : @ui.registerNick.val())
@@ -72,6 +114,12 @@ define [
         if @model.validationError.password?
           $(".register-pwd-error").html(@model.validationError.password[0])
 
+    ###*
+    # Login a user
+    #
+    # @method doLogin
+    # @param {Object} jquery.event
+    ###
     doLogin : (e) ->
       e.preventDefault()
       @model.set(username : "dd")

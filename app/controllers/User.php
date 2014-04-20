@@ -2,15 +2,40 @@
 namespace Controller;
 use Model\UserModel as UserModel;
 use Cartalyst\Sentry\Facades\Native\Sentry as Sentry;
+
+/**
+ *  User
+ *  Manage user
+ *
+ *  @package User
+ *  @category classes
+ *  @licence GPL3
+ */
 class User
 {
+
+  /**
+   *  App instance
+   *  @var mixed $app
+   */
   private $app;
 
+  /**
+   *  Constructor
+   *
+   *  @param mixed $app
+   *  @return void
+   */
   public function __construct($app)
   {
     $this->app = $app;
   }
 
+  /**
+   * Get info on current session' user
+   *
+   * @return array|false user informations
+   */
   public function getInfo()
   {
     if(Sentry::check())
@@ -27,6 +52,12 @@ class User
     }
   }
 
+  /**
+   * Authenticate, Disconnect or Login a user
+   *
+   * @param mixed $data user informations and action needed to do
+   * @return boolean Determins action success or failure
+   */
   public function auth($data)
   {
     // login
@@ -39,11 +70,13 @@ class User
       Sentry::authenticateAndRemember($credentials);
       return 1;
     }
+
     // logout
     else if(Sentry::check() && $data->status === "inactive")
     {
       Sentry::logout();
     }
+
     // register
     else if($data->status === "register")
     {
@@ -70,6 +103,12 @@ class User
     return 0;
   }
 
+  /**
+   *  Get list of users matching data for autocompletion
+   *
+   *  @param string $data
+   *  @return mixed|false list of users matching or false if not
+   */
   public function getUserList($data)
   {
     $return = [];
@@ -83,13 +122,23 @@ class User
     }
     return false;
   }
-
+  /**
+   *  Get id of an user
+   *
+   *  @param string $name
+   *  @return integer|false id of user
+   */
   public function getIdFromName($name)
   {
     return UserModel::where("first_name", "=", $name)->first();
     return false;
   }
 
+  /**
+   *  Get session user
+   *
+   *  @return mixed|false user informations
+   */
   public function getCurrent()
   {
 

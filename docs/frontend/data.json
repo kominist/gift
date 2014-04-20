@@ -1,0 +1,972 @@
+{
+    "project": {},
+    "files": {
+        "assets/dist/js/app/gift/gift.js": {
+            "name": "assets/dist/js/app/gift/gift.js",
+            "modules": {},
+            "classes": {
+                "Gift": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/gift/giftCollection.js": {
+            "name": "assets/dist/js/app/gift/giftCollection.js",
+            "modules": {},
+            "classes": {
+                "GiftCollection": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/gift/giftCompositeView.js": {
+            "name": "assets/dist/js/app/gift/giftCompositeView.js",
+            "modules": {},
+            "classes": {
+                "GiftCompositeView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/gift/giftModel.js": {
+            "name": "assets/dist/js/app/gift/giftModel.js",
+            "modules": {},
+            "classes": {
+                "GiftModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/gift/zerogift.js": {
+            "name": "assets/dist/js/app/gift/zerogift.js",
+            "modules": {},
+            "classes": {
+                "ZeroGiftView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/search/search.js": {
+            "name": "assets/dist/js/app/search/search.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/search/searchGiftModel.js": {
+            "name": "assets/dist/js/app/search/searchGiftModel.js",
+            "modules": {},
+            "classes": {
+                "SearchGiftModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/search/searchGiftView.js": {
+            "name": "assets/dist/js/app/search/searchGiftView.js",
+            "modules": {},
+            "classes": {
+                "SearchGift": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/search/searchModel.js": {
+            "name": "assets/dist/js/app/search/searchModel.js",
+            "modules": {},
+            "classes": {
+                "Search": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/search/searchUserModel.js": {
+            "name": "assets/dist/js/app/search/searchUserModel.js",
+            "modules": {},
+            "classes": {
+                "SearchUserModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/ui/loginRegister.js": {
+            "name": "assets/dist/js/app/ui/loginRegister.js",
+            "modules": {},
+            "classes": {
+                "LoginRegister": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/user/user.js": {
+            "name": "assets/dist/js/app/user/user.js",
+            "modules": {},
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "assets/dist/js/app/user/userEmpty.js": {
+            "name": "assets/dist/js/app/user/userEmpty.js",
+            "modules": {},
+            "classes": {
+                "UserEmpty": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Gift": {
+            "name": "Gift",
+            "shortname": "Gift",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 7,
+            "description": "Single gift view",
+            "is_constructor": 1,
+            "extends": "Marionette.ItemView"
+        },
+        "GiftCollection": {
+            "name": "GiftCollection",
+            "shortname": "GiftCollection",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/gift/giftCollection.js",
+            "line": 7,
+            "description": "List of gifts",
+            "extends": "Backbone.Collection"
+        },
+        "GiftCompositeView": {
+            "name": "GiftCompositeView",
+            "shortname": "GiftCompositeView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 7,
+            "description": "List of gift collection",
+            "is_constructor": 1,
+            "extends": "Marionette.CompositeView"
+        },
+        "GiftModel": {
+            "name": "GiftModel",
+            "shortname": "GiftModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/gift/giftModel.js",
+            "line": 7,
+            "description": "Single gift data",
+            "is_constructor": 1,
+            "extends": "Backbone.Model"
+        },
+        "ZeroGiftView": {
+            "name": "ZeroGiftView",
+            "shortname": "ZeroGiftView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/gift/zerogift.js",
+            "line": 7,
+            "description": "View when no gift have been found",
+            "is_constructor": 1,
+            "extends": "Marionette.ItemView"
+        },
+        "Search": {
+            "name": "Search",
+            "shortname": "Search",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/search/searchModel.js",
+            "line": 7,
+            "description": "Search a gift trade",
+            "is_constructor": 1,
+            "extends": "Marionette.ItemView"
+        },
+        "SearchGiftModel": {
+            "name": "SearchGiftModel",
+            "shortname": "SearchGiftModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/search/searchGiftModel.js",
+            "line": 7,
+            "description": "Search a trade between two users",
+            "is_constructor": 1,
+            "extends": "Backbone.Model"
+        },
+        "SearchGift": {
+            "name": "SearchGift",
+            "shortname": "SearchGift",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/search/searchGiftView.js",
+            "line": 7,
+            "description": "Render the name on which\nthe collection is filtered",
+            "is_constructor": 1
+        },
+        "SearchUserModel": {
+            "name": "SearchUserModel",
+            "shortname": "SearchUserModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/search/searchUserModel.js",
+            "line": 7,
+            "description": "Autocompletion data",
+            "is_constructor": 1
+        },
+        "LoginRegister": {
+            "name": "LoginRegister",
+            "shortname": "LoginRegister",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/ui/loginRegister.js",
+            "line": 4,
+            "description": "Manage form tabs",
+            "is_constructor": 1
+        },
+        "User": {
+            "name": "User",
+            "shortname": "User",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/user/user.js",
+            "line": 7,
+            "description": "Single user view",
+            "is_constructor": 1,
+            "extends": "Marionette.ItemView"
+        },
+        "UserEmpty": {
+            "name": "UserEmpty",
+            "shortname": "UserEmpty",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 7,
+            "description": "View if the user is not logged in",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 23,
+            "description": "Model to render the gift",
+            "itemtype": "attribute",
+            "name": "model",
+            "default": "GiftModel",
+            "type": "Backbone.Model",
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 34,
+            "description": "Template for the view",
+            "itemtype": "attribute",
+            "name": "template",
+            "default": "\"#gift-view\"",
+            "type": "String",
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 45,
+            "description": "Model to store the current user",
+            "itemtype": "attribute",
+            "name": "currentUser",
+            "default": "UserModel",
+            "type": "Backbone.Model",
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 56,
+            "description": "Bind DOM element as a variable",
+            "itemtype": "property",
+            "name": "ui.create",
+            "default": "\"button#add-gift\"",
+            "type": "String",
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 70,
+            "description": "Fire when a user have accepted the gift trade",
+            "itemtype": "event",
+            "name": "click:doAccept",
+            "requires": [
+                "user:read"
+            ],
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 78,
+            "description": "Fire when a user have refused the gift trade",
+            "itemtype": "event",
+            "name": "click:doRefuse",
+            "requires": [
+                "user:read"
+            ],
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 86,
+            "description": "Fire when a user canceled a trade",
+            "itemtype": "event",
+            "name": "click:doCancel",
+            "requires": [
+                "user:create"
+            ],
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 96,
+            "description": "Render a template depending on user permissions",
+            "itemtype": "method",
+            "name": "getTemplate",
+            "return": {
+                "description": "View",
+                "type": "String"
+            },
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 114,
+            "description": "Accept a gift",
+            "itemtype": "method",
+            "name": "doAccept",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "beta": 1,
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 135,
+            "description": "Refuse a gift",
+            "itemtype": "method",
+            "name": "doRefuse",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/gift.js",
+            "line": 155,
+            "description": "Cancel a gift",
+            "itemtype": "method",
+            "name": "doCancel",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "Gift"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCollection.js",
+            "line": 22,
+            "description": "Model of the collection",
+            "itemtype": "attribute",
+            "name": "model",
+            "default": "GiftModel",
+            "type": "Backbone.Model",
+            "class": "GiftCollection"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCollection.js",
+            "line": 33,
+            "description": "Url to talk to the server",
+            "itemtype": "attribute",
+            "name": "url",
+            "default": "\"gift\"",
+            "type": "String",
+            "class": "GiftCollection"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 23,
+            "description": "Collection type",
+            "itemtype": "attribute",
+            "name": "collection",
+            "default": "GiftCollection",
+            "type": "Backbone.Collection",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 34,
+            "description": "itemView for a single gift",
+            "itemtype": "attribute",
+            "name": "itemView",
+            "default": "Gift",
+            "type": "Marionette.ItemView",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 45,
+            "description": "itemView when no gift is provided",
+            "itemtype": "attribute",
+            "name": "emptyView",
+            "default": "ZeroGiftView",
+            "type": "Marionette.ItemView",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 56,
+            "description": "Filters the collection through this model",
+            "itemtype": "attribute",
+            "name": "model",
+            "default": "SearchGiftModel",
+            "type": "Backbone.Model",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 67,
+            "description": "Template for the model",
+            "itemtype": "attribute",
+            "name": "template",
+            "default": "\"#search-result\"",
+            "type": "String",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 78,
+            "description": "Container of the gift collection",
+            "itemtype": "attribute",
+            "name": "itemViewContainer",
+            "default": "\"#suggestions\"",
+            "type": "String",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 89,
+            "description": "Set the current user",
+            "itemtype": "method",
+            "name": "setUser",
+            "params": [
+                {
+                    "name": "currentUser",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "this.user",
+                "type": "String"
+            },
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 102,
+            "description": "Trigger before rendering the CompositeView",
+            "itemtype": "method",
+            "name": "onBeforeRender",
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 120,
+            "description": "Fire when the model SearchGiftModel is changed",
+            "itemtype": "event",
+            "name": "modelEvents.change",
+            "params": [
+                {
+                    "name": "function",
+                    "description": "to call",
+                    "type": "String"
+                }
+            ],
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 132,
+            "description": "Fire when the colleciton is changed",
+            "itemtype": "event",
+            "name": "collectionEvents.change",
+            "params": [
+                {
+                    "name": "function",
+                    "description": "to call",
+                    "type": "String"
+                }
+            ],
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 144,
+            "description": "Function to filter the collection when\nthe filter SearchGiftModel change",
+            "itemtype": "method",
+            "name": "modelchanged",
+            "return": {
+                "description": "render",
+                "type": "Mixed"
+            },
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftCompositeView.js",
+            "line": 165,
+            "description": "Rerender the collection",
+            "itemtype": "method",
+            "name": "collectionChanged",
+            "return": {
+                "description": "render",
+                "type": "Mixed"
+            },
+            "class": "GiftCompositeView"
+        },
+        {
+            "file": "assets/dist/js/app/gift/giftModel.js",
+            "line": 23,
+            "description": "Check the status of the gift trade",
+            "itemtype": "method",
+            "name": "isCurrentUser",
+            "params": [
+                {
+                    "name": "user",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "assert that the\n  status variable is instancied",
+                "type": "Boolean"
+            },
+            "class": "GiftModel"
+        },
+        {
+            "file": "assets/dist/js/app/gift/zerogift.js",
+            "line": 23,
+            "description": "Template for the current view",
+            "itemtype": "attribute",
+            "name": "rendered",
+            "default": "\"#gift-empty-view\"",
+            "type": "String",
+            "class": "ZeroGiftView"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 23,
+            "description": "Model to render the search",
+            "itemtype": "attribute",
+            "name": "model",
+            "default": "SearchModel",
+            "type": "Backbone.Model",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 34,
+            "description": "Template for the view",
+            "itemtype": "attribute",
+            "name": "template",
+            "default": "\"#gift-search\"",
+            "type": "String",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 46,
+            "description": "User input",
+            "itemtype": "property",
+            "name": "ui.input",
+            "default": "\"input[name=gift-search]\"",
+            "type": "String",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 55,
+            "description": "Suggestion based on user input",
+            "itemtype": "property",
+            "name": "ui.suggestion",
+            "default": "\"#result\"",
+            "type": "String",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 64,
+            "description": "Send a gift to the user input",
+            "itemtype": "property",
+            "name": "ui.send",
+            "default": "\"button[name=gift-add]\"",
+            "type": "String",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 77,
+            "description": "Fire when a user type something in the search input",
+            "itemtype": "event",
+            "name": "keyUp:doSearch",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 84,
+            "description": "Fire when the user clicks on \"donner un cadeau\"\n\n#event click:sendUsername",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 93,
+            "description": "Autocompletion",
+            "itemtype": "method",
+            "name": "doSearch",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "users matching the input",
+                "type": "Array"
+            },
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 115,
+            "description": "Render the autocompletion",
+            "itemtype": "method",
+            "name": "suggest",
+            "params": [
+                {
+                    "name": "users",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "render": "{Mixed} template",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 136,
+            "description": "Give a gift",
+            "itemtype": "method",
+            "name": "sendUsername",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "beta": 1,
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchGiftModel.js",
+            "line": 23,
+            "description": "Url to talk to the server",
+            "itemtype": "attribute",
+            "name": "url",
+            "default": "\"searchtrade\"",
+            "type": "String",
+            "class": "SearchGiftModel"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchGiftModel.js",
+            "line": 35,
+            "description": "validate user filter",
+            "itemtype": "property",
+            "name": "validation.filteron",
+            "class": "SearchGiftModel",
+            "subprops": [
+                {
+                    "name": "required",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "minlength",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "file": "assets/dist/js/app/search/searchGiftModel.js",
+            "line": 48,
+            "description": "Set the filter to off",
+            "itemtype": "attribute",
+            "name": "filterOn",
+            "default": "false",
+            "type": "Boolean",
+            "class": "SearchGiftModel"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchGiftView.js",
+            "line": 23,
+            "description": "Model to render the filter name",
+            "attibute": "model",
+            "default": "SearchGiftModel",
+            "type": "Backbone.Model",
+            "class": "SearchGift"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchGiftView.js",
+            "line": 34,
+            "description": "Template for the view",
+            "itemtype": "attribute",
+            "name": "template",
+            "default": "\"#filter-name\"",
+            "type": "String",
+            "class": "SearchGift"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchModel.js",
+            "line": 22,
+            "description": "Url to talk to server",
+            "itemtype": "attribute",
+            "name": "url",
+            "default": "search",
+            "type": "String",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchUserModel.js",
+            "line": 22,
+            "description": "Url to talk to the server",
+            "itemtype": "attribute",
+            "name": "url",
+            "default": "\"searchuser\"",
+            "type": "String",
+            "class": "SearchUserModel"
+        },
+        {
+            "file": "assets/dist/js/app/search/searchUserModel.js",
+            "line": 34,
+            "description": "validate username",
+            "itemtype": "property",
+            "name": "validation",
+            "class": "SearchUserModel",
+            "subprops": [
+                {
+                    "name": "required",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ]
+        },
+        {
+            "file": "assets/dist/js/app/ui/loginRegister.js",
+            "line": 24,
+            "description": "Show/hide forms depending on user actions",
+            "itemtype": "method",
+            "name": "toggleBtn",
+            "class": "LoginRegister"
+        },
+        {
+            "file": "assets/dist/js/app/ui/loginRegister.js",
+            "line": 48,
+            "description": "Compare the previous and current status\nof the form in order to hide the active form\nif it was previously actie",
+            "itemtype": "method",
+            "name": "isActive",
+            "return": {
+                "description": "isActive",
+                "type": "Boolean"
+            },
+            "class": "LoginRegister"
+        },
+        {
+            "file": "assets/dist/js/app/ui/loginRegister.js",
+            "line": 62,
+            "description": "Set the status of the form",
+            "itemtype": "method",
+            "name": "setActive",
+            "params": [
+                {
+                    "name": "active",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "forms",
+                "type": "Array"
+            },
+            "class": "LoginRegister"
+        },
+        {
+            "file": "assets/dist/js/app/user/user.js",
+            "line": 23,
+            "description": "Model to render a user",
+            "itemtype": "attribute",
+            "name": "model",
+            "default": "UserModel",
+            "type": "Backbone.Model",
+            "class": "User"
+        },
+        {
+            "file": "assets/dist/js/app/user/user.js",
+            "line": 34,
+            "description": "Template for the view",
+            "itemtype": "attribute",
+            "name": "template",
+            "default": "\"#user-view\"",
+            "string": "String",
+            "class": "User"
+        },
+        {
+            "file": "assets/dist/js/app/user/user.js",
+            "line": 48,
+            "description": "Fire when a logged clicks on logout",
+            "itemtype": "event",
+            "name": "click:doLogout",
+            "requires": [
+                "user:islogged"
+            ],
+            "class": "User"
+        },
+        {
+            "file": "assets/dist/js/app/user/user.js",
+            "line": 58,
+            "description": "Logout the user",
+            "itemtype": "method",
+            "name": "dologout",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "User"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 22,
+            "description": "Model to store the current user",
+            "attibute": "model",
+            "is_constructor": 1,
+            "extends": "Backbone.Model",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 33,
+            "description": "Template for the view",
+            "itemtype": "attribute",
+            "name": "template",
+            "default": "\"#user-empty-view\"",
+            "type": "String",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 45,
+            "description": "Nickname input for registering",
+            "itemtype": "property",
+            "name": "ui.registerNick",
+            "default": "\"input[name=register-nick]\"",
+            "type": "String",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 54,
+            "description": "Password input for registering",
+            "itemtype": "property",
+            "name": "ui.registerPassword",
+            "default": "input[name=register-pwd]",
+            "type": "String",
+            "class": "UserEmpty"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: render",
+            "line": " assets/dist/js/app/search/search.js:115"
+        },
+        {
+            "message": "unknown tag: attibute",
+            "line": " assets/dist/js/app/search/searchGiftView.js:23"
+        },
+        {
+            "message": "unknown tag: string",
+            "line": " assets/dist/js/app/user/user.js:34"
+        },
+        {
+            "message": "unknown tag: attibute",
+            "line": " assets/dist/js/app/user/userEmpty.js:22"
+        },
+        {
+            "message": "Missing item type\nFire when the user clicks on \"donner un cadeau\"\n\n#event click:sendUsername",
+            "line": " assets/dist/js/app/search/search.js:84"
+        },
+        {
+            "message": "Missing item type\nModel to render the filter name",
+            "line": " assets/dist/js/app/search/searchGiftView.js:23"
+        },
+        {
+            "message": "Missing item type\nModel to store the current user",
+            "line": " assets/dist/js/app/user/userEmpty.js:22"
+        }
+    ]
+}

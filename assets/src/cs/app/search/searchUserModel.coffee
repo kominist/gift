@@ -26,7 +26,7 @@ define [
       ###*
       # validate username
       #
-      # @property validation
+      # @property username
       # @param {Boolean} required
       ###
       username :

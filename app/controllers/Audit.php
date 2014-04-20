@@ -2,9 +2,28 @@
 namespace Controller;
 use Model\UserModel;
 
+/**
+ *  Audit
+ *  Define what to log
+ *
+ *  @package Audit
+ *  @category classes
+ *  @licence GPL3
+ */
 class Audit{
+
+  /**
+   *  App instance
+   *  @var mixed $app
+   */
   private $app;
 
+  /**
+   *  Constructor
+   *
+   *  @param mixed $app
+   *  @return void
+   */
   public function __construct($app)
   {
     $this->app = $app;
@@ -12,7 +31,13 @@ class Audit{
     $this->type = "";
   }
 
-  # Mode that the instance is
+  /**
+   * Set the current mode
+   *
+   * @param string $app
+   * @return string if mode is accepted
+   * @return boolean if mode is not accepted
+   */
   public function setMode($mode)
   {
     $supported = ["none", "write"];
@@ -23,8 +48,13 @@ class Audit{
     return false;
   }
 
-  # Set the handler and its options
-  # Types currently supported : file
+  /**
+   * Set the current handler and its options
+   *
+   * @param mixed $handler
+   * @param array $options
+   * @return boolean handler have successfully been updated
+   */
   public function setHandler($handler, $options)
   {
     $check = false;
@@ -38,33 +68,49 @@ class Audit{
     return $check;
   }
 
-  ###
-  #   PROPERTIES
-  ###
-  # status of the http header
+  /**
+   *  Log the http header status code
+   *
+   *  @param integer $statusCode
+   *  @return void
+   */
   public function setStatusCode($statusCode)
   {
     $this->statusCode = $statusCode;
   }
 
-  # set visitor or (username if member)
+  /**
+   *  Log the current user if exists
+   *  else log it as "visitor"
+   *
+   *  @param string $username
+   *  @return void
+   */
   public function setUser($username)
   {
     $this->username = !empty($username)? $username: "visitor";
   }
 
-  # set ip
+  /**
+   *  Log the ip if valid pattern
+   *  else log it as 0
+   *
+   *  @param string $ip
+   *  @return void
+   */
   public function setIp($ip)
   {
     $this->ip = preg_match('/^([0-9]{1,3}\.){3}[0-9]{1,3}$/', $ip)? $ip : 0;
   }
 
-  ###
-  #   ACTIONS
-  ###
-  # Stack the actions
-  # pattern :
-  # [%TIMESTAMP%] logname.LOGTYPE: logbag[actions] []
+  /**
+   *  Format the log
+   *
+   *  @param string entity
+   *  @param string name
+   *  @param string action
+   *  @return void
+   */
   public function push($entity, $name, $action)
   {
     $this->pusher = [
@@ -76,7 +122,12 @@ class Audit{
     ];
   }
 
-  ### Set type of action
+  /**
+   *  Set the type of the log
+   *
+   *  @param integer $type
+   *  @return boolean type have been successfully written
+   */
   public function isA($type)
   {
     if(is_integer($type) && $this->mode === "write")
@@ -110,13 +161,23 @@ class Audit{
     return false;
   }
 
-  ### Users
+  /**
+   *  Log if user has registered
+   *
+   *  @return void
+   */
   public function hasRegistered()
   {
     $this->push("user", $this->username, "registered");
     $this->isA(200);
   }
 
+  /**
+   *  Log if the user has logged in
+   *
+   *  @param string $email
+   *  @return void
+   */
   public function hasLogin($email)
   {
     $user = UserModel::where("email", "=", $email)->count();
@@ -125,6 +186,12 @@ class Audit{
     $this->isA($level);
   }
 
+  /**
+   *  Log if the user has logged out
+   *
+   *  @param mixed $session
+   *  @return void
+   */
   public function hasLogout($session)
   {
     # Are infos about current user normals?
@@ -141,7 +208,13 @@ class Audit{
     $this->isA($level);
   }
 
-  ### User action over gift
+  /**
+   *  Log if the user had give a gift
+   *
+   *  @param string $from giver
+   *  @param string $to getter
+   *  @return void
+   */
   public function gaveGift($from, $to)
   {
     $user = UserModel::where("email", "=", $to);
@@ -152,22 +225,39 @@ class Audit{
     $this->isA($level);
   }
 
+  /**
+   *  Log if the giver have canceled the gift
+   *
+   *  @param string $from giver
+   *  @return void
+   */
   public function canceledGift($from)
   {
     $this->push("gift", $from, "canceled");
     $this->isA(200);
   }
 
+  /**
+   *  Log if the getter have accepted the gift
+   *
+   *  @param string $getter
+   *  @return void
+   */
   public function acceptedGift($getter)
   {
     $this->push("gift", $getter, "accepted");
     $this->isA(200);
   }
 
+  /**
+   *  Log if the getter have refused the gift
+   *
+   *  @param string $getter
+   *  @return void
+   */
   public function refusedGift($getter)
   {
     $this->push("gift", $getter, "refused");
     $this->isA(200);
   }
-
 }
