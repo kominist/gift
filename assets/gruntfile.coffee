@@ -104,9 +104,11 @@ module.exports = (grunt) ->
     "copy:dist"
     "copy:fonts"
   ]
+
   grunt.registerTask "vendor", [
     "uglify:compile"
   ]
+
   grunt.registerTask "css", [
     "stylus:dist"
     "cssmin:dist"

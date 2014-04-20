@@ -1,10 +1,11 @@
 db/
 db/*
 composer.lock
-vendor/
+./vendor/*
 bin/*
-assets/node_modules/
+assets/node_modules/*
 assets/dist/
+!assets/src/vendor/
 test/frontend/node_modules/
 logs/*
 !test/bootstrap.php
