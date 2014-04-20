@@ -2,12 +2,54 @@ define [
   "marionette"
   "user/userModel"
 ], (( Marionette, UserModel) ->
+
+  ###*
+  # View if the user is not logged in
+  #
+  # @class UserEmpty
+  # @constructor
+  ###
   class UserEmpty extends Marionette.ItemView
-    template : "#user-empty-view"
+
+    ###*
+    # Model to store the current user
+    #
+    # @attibute model
+    # @constructor
+    # @extends Backbone.Model
+    ###
     model : UserModel
+
+    ###*
+    # Template for the view
+    #
+    # @attribute template
+    # @default "#user-empty-view"
+    # @type String
+    ###
+    template : "#user-empty-view"
+
+    # Bind DOM element as a variable
     ui :
+      ###*
+      # Nickname input for registering
+      #
+      # @property ui.registerNick
+      # @default "input[name=register-nick]"
+      # @type String
+      ###
       registerNick : "input[name=register-nick]"
+
+      ###*
+      # Password input for registering
+      #
+      # @property ui.registerPassword
+      # @default input[name=register-pwd]
+      # @type String
+      ###
       registerPassword : "input[name=register-pwd]"
+
+
       registerMail : "input[name=register-mail]"
       loginMail : "input[name=login-mail]"
       loginPassword : "input[name=login-pwd]"

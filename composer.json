@@ -1,5 +1,8 @@
 {
   "minimum-stability" : "dev",
+  "name" : "kominist/gift",
+  "description" : "echanges de cadeaux pour les komitiens",
+  "licence" : "MIT",
   "require" : {
     "php" : ">=5.4.0",
     "silex/silex" : "1.0.*@dev",

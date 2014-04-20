@@ -2,7 +2,24 @@ define [
   "marionette"
   "validate"
 ], (( Marionette, Validate) ->
+
+  ###*
+  # Single gift data
+  #
+  # @class GiftModel
+  # @constructor
+  # @extends Backbone.Model
+  ###
   class GiftModel extends Backbone.Model
+
+    ###*
+    # Check the status of the gift trade
+    #
+    # @method isCurrentUser
+    # @param {String} user
+    # @return {Boolean} assert that the
+    #   status variable is instancied
+    ###
     isCurrentUser : (user) ->
       if @get("status") is "initialized"
         if user is @get("giver").name
@@ -13,6 +30,7 @@ define [
           @set("refusable", true)
         else
           @set("refusable", false)
-
-      true
+        return true
+      false
+      
 )

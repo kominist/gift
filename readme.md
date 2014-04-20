@@ -16,6 +16,7 @@ Dependances
 + php >= 5.4.0
 + sqlite 3
 + apache (mod_rewrite, dav on, mcrypt)
-+ nodejs
++ composer
++ nodejs, npm
 
 
