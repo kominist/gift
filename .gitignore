@@ -6,6 +6,7 @@ assets/node_modules/*
 assets/dist/
 test/frontend/node_modules/
 logs/*
+docs/
 !test/bootstrap.php
 !assets/src/vendor/
 todo.md
