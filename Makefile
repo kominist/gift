@@ -17,7 +17,6 @@ install:
 
 documentation :
 	yuidoc assets/dist/js -o docs/frontend/
-	./bin/phpdoc.php -d app/ -t ./docs/backend/
 
 update :
 	composer update
