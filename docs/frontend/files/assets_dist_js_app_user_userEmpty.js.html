@@ -63,6 +63,8 @@
             
                 <li><a href="../classes/UserEmpty.html">UserEmpty</a></li>
             
+                <li><a href="../classes/UserModel.html">UserModel</a></li>
+            
                 <li><a href="../classes/ZeroGiftView.html">ZeroGiftView</a></li>
             
             </ul>
@@ -165,19 +167,65 @@
          * Password input for registering
          *
          * @property ui.registerPassword
-         * @default input[name=register-pwd]
+         * @default &quot;input[name=register-pwd]&quot;
          * @type String
          */
         registerPassword: &quot;input[name=register-pwd]&quot;,
+
+        /**
+         * Mail input for registering
+         *
+         * @property ui.registerMail
+         * @default &quot;input[name=register-mail]&quot;
+         * @type String
+         */
         registerMail: &quot;input[name=register-mail]&quot;,
+
+        /**
+         * Mail input for login
+         *
+         * @property ui.loginMail
+         * @default &quot;input[name=login-mail]&quot;
+         * @type String
+         */
         loginMail: &quot;input[name=login-mail]&quot;,
+
+        /**
+         * Password input for login
+         *
+         * @property ui.loginPassword
+         * @default &quot;input[name=login-pwd]&quot;
+         * @type String
+         */
         loginPassword: &quot;input[name=login-pwd]&quot;
       };
 
       UserEmpty.prototype.events = {
+
+        /**
+         * Fire when a user filled the form and
+         * want to register
+         *
+         * @event click:doRegister
+         */
         &#x27;click button#register&#x27;: &quot;doRegister&quot;,
+
+        /**
+         * Fire when a user filled the form and
+         * want to login
+         *
+         * @event click:doLogin
+         */
         &#x27;click button#login&#x27;: &quot;doLogin&quot;
       };
+
+
+      /**
+       * Register a user
+       *
+       * @method doRegister
+       * @param {Object} jquery.event
+       */
 
       UserEmpty.prototype.doRegister = function(e) {
         e.preventDefault();
@@ -204,10 +252,18 @@
         }
       };
 
+
+      /**
+       * Login a user
+       *
+       * @method doLogin
+       * @param {Object} jquery.event
+       */
+
       UserEmpty.prototype.doLogin = function(e) {
         e.preventDefault();
         this.model.set({
-          username: &quot;dd&quot;
+          username: &quot;   &quot;
         });
         this.model.set({
           email: this.ui.loginMail.val()

@@ -1,6 +1,6 @@
 install:
 	composer self-update
-	composer install 
+	composer install
 	mkdir -p db logs
 	touch db/db.sqlite
 	touch logs/mono.log
@@ -16,8 +16,8 @@ install:
 	bin/phpmig migrate
 
 documentation :
-	composer update
 	yuidoc assets/dist/js -o docs/frontend/
+	./bin/phpdoc.php -d app/ -t ./docs/backend/
 
 update :
 	composer update

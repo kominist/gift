@@ -12,6 +12,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "SearchUserModel",
         "User",
         "UserEmpty",
+        "UserModel",
         "ZeroGiftView"
     ],
     "modules": [],

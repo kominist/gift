@@ -63,6 +63,8 @@
             
                 <li><a href="../classes/UserEmpty.html">UserEmpty</a></li>
             
+                <li><a href="../classes/UserModel.html">UserModel</a></li>
+            
                 <li><a href="../classes/ZeroGiftView.html">ZeroGiftView</a></li>
             
             </ul>
@@ -163,6 +165,16 @@
         input: &quot;input[name=gift-search]&quot;,
 
         /**
+         * Error box, trigger when the validations
+         * did not pass
+         *
+         * @property ui.error
+         * @default &quot;.error-search&quot;
+         * @type String
+         */
+        error: &quot;.error-search&quot;,
+
+        /**
          * Suggestion based on user input
          *
          * @property ui.suggestion
@@ -258,7 +270,10 @@
           username: this.ui.input.val()
         });
         if (searchUserModel.save() === false) {
-          return console.log(this.model.validationError);
+          if (this.model.validationError != null) {
+            this.model.validationError = &quot;champ de rechereche non valide&quot;;
+          }
+          return this.ui.error.html(this.model.validationError);
         } else {
           return setTimeout(function() {
             return window.location.reload();

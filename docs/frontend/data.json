@@ -115,6 +115,15 @@
             },
             "fors": {},
             "namespaces": {}
+        },
+        "assets/dist/js/app/user/userModel.js": {
+            "name": "assets/dist/js/app/user/userModel.js",
+            "modules": {},
+            "classes": {
+                "UserModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
         }
     },
     "modules": {},
@@ -281,6 +290,20 @@
             "line": 7,
             "description": "View if the user is not logged in",
             "is_constructor": 1
+        },
+        "UserModel": {
+            "name": "UserModel",
+            "shortname": "UserModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "assets/dist/js/app/user/userModel.js",
+            "line": 7,
+            "description": "Single user",
+            "is_constructor": 1,
+            "extends": "Backbone.Model"
         }
     },
     "classitems": [
@@ -638,6 +661,16 @@
         {
             "file": "assets/dist/js/app/search/search.js",
             "line": 55,
+            "description": "Error box, trigger when the validations\ndid not pass",
+            "itemtype": "property",
+            "name": "ui.error",
+            "default": "\".error-search\"",
+            "type": "String",
+            "class": "Search"
+        },
+        {
+            "file": "assets/dist/js/app/search/search.js",
+            "line": 65,
             "description": "Suggestion based on user input",
             "itemtype": "property",
             "name": "ui.suggestion",
@@ -647,7 +680,7 @@
         },
         {
             "file": "assets/dist/js/app/search/search.js",
-            "line": 64,
+            "line": 74,
             "description": "Send a gift to the user input",
             "itemtype": "property",
             "name": "ui.send",
@@ -657,7 +690,7 @@
         },
         {
             "file": "assets/dist/js/app/search/search.js",
-            "line": 77,
+            "line": 87,
             "description": "Fire when a user type something in the search input",
             "itemtype": "event",
             "name": "keyUp:doSearch",
@@ -665,13 +698,13 @@
         },
         {
             "file": "assets/dist/js/app/search/search.js",
-            "line": 84,
+            "line": 94,
             "description": "Fire when the user clicks on \"donner un cadeau\"\n\n#event click:sendUsername",
             "class": "Search"
         },
         {
             "file": "assets/dist/js/app/search/search.js",
-            "line": 93,
+            "line": 103,
             "description": "Autocompletion",
             "itemtype": "method",
             "name": "doSearch",
@@ -690,7 +723,7 @@
         },
         {
             "file": "assets/dist/js/app/search/search.js",
-            "line": 115,
+            "line": 125,
             "description": "Render the autocompletion",
             "itemtype": "method",
             "name": "suggest",
@@ -706,7 +739,7 @@
         },
         {
             "file": "assets/dist/js/app/search/search.js",
-            "line": 136,
+            "line": 146,
             "description": "Give a gift",
             "itemtype": "method",
             "name": "sendUsername",
@@ -804,7 +837,7 @@
             "line": 34,
             "description": "validate username",
             "itemtype": "property",
-            "name": "validation",
+            "name": "username",
             "class": "SearchUserModel",
             "subprops": [
                 {
@@ -934,15 +967,176 @@
             "description": "Password input for registering",
             "itemtype": "property",
             "name": "ui.registerPassword",
-            "default": "input[name=register-pwd]",
+            "default": "\"input[name=register-pwd]\"",
             "type": "String",
             "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 63,
+            "description": "Mail input for registering",
+            "itemtype": "property",
+            "name": "ui.registerMail",
+            "default": "\"input[name=register-mail]\"",
+            "type": "String",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 72,
+            "description": "Mail input for login",
+            "itemtype": "property",
+            "name": "ui.loginMail",
+            "default": "\"input[name=login-mail]\"",
+            "type": "String",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 81,
+            "description": "Password input for login",
+            "itemtype": "property",
+            "name": "ui.loginPassword",
+            "default": "\"input[name=login-pwd]\"",
+            "type": "String",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 93,
+            "description": "Fire when a user filled the form and\nwant to register",
+            "itemtype": "event",
+            "name": "click:doRegister",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 101,
+            "description": "Fire when a user filled the form and\nwant to login",
+            "itemtype": "event",
+            "name": "click:doLogin",
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 111,
+            "description": "Register a user",
+            "itemtype": "method",
+            "name": "doRegister",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userEmpty.js",
+            "line": 144,
+            "description": "Login a user",
+            "itemtype": "method",
+            "name": "doLogin",
+            "params": [
+                {
+                    "name": "jquery.event",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "UserEmpty"
+        },
+        {
+            "file": "assets/dist/js/app/user/userModel.js",
+            "line": 23,
+            "description": "Url to talk to the server",
+            "itemtype": "attribute",
+            "name": "url",
+            "default": "\"user\"",
+            "type": "String",
+            "class": "UserModel"
+        },
+        {
+            "file": "assets/dist/js/app/user/userModel.js",
+            "line": 35,
+            "description": "validate email",
+            "itemtype": "property",
+            "name": "email",
+            "class": "UserModel",
+            "subprops": [
+                {
+                    "name": "required",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "format",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "file": "assets/dist/js/app/user/userModel.js",
+            "line": 49,
+            "description": "validate username",
+            "itemtype": "property",
+            "name": "username",
+            "class": "UserModel",
+            "subprops": [
+                {
+                    "name": "required",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "minLength",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "file": "assets/dist/js/app/user/userModel.js",
+            "line": 63,
+            "description": "Validate password",
+            "itemtype": "property",
+            "name": "password",
+            "class": "UserModel",
+            "subprops": [
+                {
+                    "name": "required",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "minlength",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                }
+            ]
         }
     ],
     "warnings": [
         {
             "message": "unknown tag: render",
-            "line": " assets/dist/js/app/search/search.js:115"
+            "line": " assets/dist/js/app/search/search.js:125"
         },
         {
             "message": "unknown tag: attibute",
@@ -958,7 +1152,7 @@
         },
         {
             "message": "Missing item type\nFire when the user clicks on \"donner un cadeau\"\n\n#event click:sendUsername",
-            "line": " assets/dist/js/app/search/search.js:84"
+            "line": " assets/dist/js/app/search/search.js:94"
         },
         {
             "message": "Missing item type\nModel to render the filter name",
