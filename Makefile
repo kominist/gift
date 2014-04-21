@@ -1,4 +1,5 @@
 install:
+	composer self-update
 	composer install --no-progress
 	mkdir -p db logs
 	touch db/db.sqlite
