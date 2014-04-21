@@ -1,6 +1,8 @@
 Cadeaumity
 ----
 
+![build status](http://api.travis-ci.org/kominist/gift.svg)
+
 Site d'échanges de cadeaux pour les komitiens.
 
 Installation
