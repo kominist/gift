@@ -1,9 +1,15 @@
 <script type="text/template" id="gift-view-current-getter" charset="utf-8">
   <div class="single-gift">
-    <div><%= giver.name %></div>
-    <div><%= getter.name %></div>
-    <div><%= status %></div>
-    <button role="button" name="accept-gift">Accepter l'échange</button>
-    <button role="button" name="refuse-gift">Refuser l'échange</button>
+    <span class="fa fa-stack fa">
+      <i class="state <%= status %> fa fa-circle-o fa-stack-2x state-global"></i>
+      <i class="state <%= status %> fa fa-circle fa-stack-1x"></i>
+    </span>
+    <div class="giver-getter">
+      <span><%= giver.name %></span>
+      <i class="fa fa-long-arrow-right"></i>
+      <span><%= getter.name %></span>
+    </div>
+    <button role="button" name="accept-gift" class="btn btn-green">Accepter l'échange</button>
+    <button role="button" name="refuse-gift" class="btn btn-red">Refuser l'échange</button>
   </div>
 </script>
