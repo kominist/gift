@@ -166,6 +166,14 @@ class CreatePropertiesTest extends WebTestCase
     $user->activated = true;
     $user->permissions = "user.create";
     $user->save();
+    $user = new UserModel;
+    $user->email = "getter@user.com";
+    $user->password = "getter";
+    $user->first_name = "getter";
+    $user->last_name = false;
+    $user->activated = true;
+    $user->permissions = "user.create";
+    $user->save();
     return $user;
   }
 
