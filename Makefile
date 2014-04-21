@@ -10,7 +10,7 @@ install:
 	chmod -R 777 logs
 	mkdir -p assets/node_modules
 	npm install ./assets --prefix ./assets/node_modules/
-	npm install -g grunt-cli yuidocjs
+	npm install -g grunt-cli
 	grunt --base ./assets --gruntfile ./assets/gruntfile.coffee
 	grunt css --base ./assets --gruntfile ./assets/gruntfile.coffee
 	grunt vendor --base ./assets --gruntfile ./assets/gruntfile.coffee
@@ -18,6 +18,7 @@ install:
 	bin/phpmig migrate
 
 documentation :
+	npm install -g yuidocjs
 	yuidoc assets/dist/js -o docs/frontend/
 	./bin/phpdoc.php -d app/ -t ./docs/backend/
 
@@ -29,3 +30,6 @@ test:
 	touch logs/test.log
 	chmod -R 777 logs/
 	bin/phpunit
+	npm install -g phantomjs
+	npm install -g mocha-phantomjs
+	mocha-phantomjs /tests/frontend/testRunner.html
