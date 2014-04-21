@@ -1,4 +1,6 @@
 install:
+	rm -r vendor
+	composer status
 	composer self-update
 	composer install
 	mkdir -p db logs
