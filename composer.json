@@ -36,7 +36,5 @@
   },
   "config" : {
     "bin-dir" : "bin/"
-  },
-  "name" : "kominist/gift",
-  "description" : "site d'échanges de cadeaux pour komitiens"
+  }
 }

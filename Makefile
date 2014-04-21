@@ -1,6 +1,6 @@
 install:
 	composer self-update
-	composer install --no-progress
+	composer install 
 	mkdir -p db logs
 	touch db/db.sqlite
 	touch logs/mono.log
