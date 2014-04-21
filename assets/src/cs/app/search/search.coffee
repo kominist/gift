@@ -46,6 +46,16 @@ define [
       input : "input[name=gift-search]"
 
       ###*
+      # Error box, trigger when the validations
+      # did not pass
+      #
+      # @property ui.error
+      # @default ".error-search"
+      # @type String
+      ###
+      error : ".error-search"
+
+      ###*
       # Suggestion based on user input
       #
       # @property ui.suggestion
@@ -121,7 +131,9 @@ define [
       e.preventDefault()
       searchUserModel = new SearchUserModel(username : @ui.input.val())
       if searchUserModel.save() is false
-        console.log @model.validationError
+        if @model.validationError?
+          @model.validationError = "champ de rechereche non valide"
+        @ui.error.html(@model.validationError)
       else
         # we're going dirty baby
         setTimeout(

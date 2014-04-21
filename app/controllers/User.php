@@ -44,7 +44,7 @@ class User
       $user = Sentry::getUser();
       $data = $this->app->json([
         "username"  => $user->first_name,
-        "password"  => "password",
+        "password"  => "     ",
         "email"     => $user->email
       ]);
       return $data;

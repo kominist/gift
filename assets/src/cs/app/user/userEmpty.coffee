@@ -122,7 +122,7 @@ define [
     ###
     doLogin : (e) ->
       e.preventDefault()
-      @model.set(username : "dd")
+      @model.set(username : "   ")
       @model.set(email : @ui.loginMail.val())
       @model.set(password : @ui.loginPassword.val())
       @model.set("status", "login")
