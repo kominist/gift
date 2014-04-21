@@ -8,7 +8,7 @@ install:
 	chmod -R 777 logs
 	mkdir -p assets/node_modules
 	npm install ./assets --prefix ./assets/node_modules/
-	npm install -g grunt-cli yuidoc
+	npm install -g grunt-cli yuidocjs
 	grunt --base ./assets --gruntfile ./assets/gruntfile.coffee
 	grunt css --base ./assets --gruntfile ./assets/gruntfile.coffee
 	grunt vendor --base ./assets --gruntfile ./assets/gruntfile.coffee
@@ -16,6 +16,7 @@ install:
 	bin/phpmig migrate
 
 documentation :
+	composer update
 	yuidoc assets/dist/js -o docs/frontend/
 
 update :
