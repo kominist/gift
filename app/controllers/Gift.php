@@ -9,7 +9,8 @@ use Cartalyst\Sentry\Facades\Native\Sentry as Sentry;
  * Gift
  * Manage gifts
  *
- * @package Gift
+ * @package Controller
+ * @subpackage Gift
  * @category classes
  * @licence GPL3
  */

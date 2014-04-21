@@ -5,7 +5,8 @@ namespace Controller;
  *  Homepage
  *  Homepage rendering controller
  *
- *  @package Homepage
+ *  @package Controller
+ *  @subpackage Homepage
  *  @category classes
  *  @licence GPL3
  */

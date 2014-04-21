@@ -7,7 +7,8 @@ use Cartalyst\Sentry\Facades\Native\Sentry as Sentry;
  *  User
  *  Manage user
  *
- *  @package User
+ *  @package Controller
+ *  @subpackage User
  *  @category classes
  *  @licence GPL3
  */

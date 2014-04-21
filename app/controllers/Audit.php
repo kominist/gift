@@ -6,7 +6,8 @@ use Model\UserModel;
  *  Audit
  *  Define what to log
  *
- *  @package Audit
+ *  @package Controller
+ *  @subpackage Audit
  *  @category classes
  *  @licence GPL3
  */
