@@ -155,10 +155,25 @@ class CreatePropertiesTest extends WebTestCase
     $this->assertEquals($statusCode, 200);
   }
 
+  // _before
+  // create the giver
+  public function createUser(){
+    $user = new UserModel;
+    $user->email = "giver@user.com";
+    $user->password = "giver";
+    $user->first_name = "giver";
+    $user->last_name = false;
+    $user->activated = true;
+    $user->permissions = "user.create";
+    $user->save();
+    return $user;
+  }
+
   // Describe Session
   //    It should return the username
   public function testUser()
   {
+    $this->createUser();
     // get session
     $this->app["session"]->username = "giver";
     $user = UserModel::where("email", "=", "giver@user.com")->first();
