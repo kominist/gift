@@ -9,5 +9,6 @@ logs/*
 docs/
 !tests/bootstrap.php
 !assets/src/vendor/
+!tests/frontend/vendor/
 todo.md
 
