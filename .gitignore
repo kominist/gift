@@ -4,10 +4,10 @@ vendor/
 bin/*
 assets/node_modules/*
 assets/dist/
-test/frontend/node_modules/
+tests/frontend/node_modules/
 logs/*
 docs/
-!test/bootstrap.php
+!tests/bootstrap.php
 !assets/src/vendor/
 todo.md
 

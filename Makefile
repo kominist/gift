@@ -30,6 +30,8 @@ test:
 	touch logs/test.log
 	chmod -R 777 logs/
 	bin/phpunit
+	npm install ./tests/frontend --prefix ./tests/frontend/node_modules/
 	npm install -g phantomjs
 	npm install -g mocha-phantomjs
+	grunt --base ./tests/frontend --gruntfile ./tests/frontend/gruntfile.coffee
 	mocha-phantomjs /tests/frontend/testRunner.html
