@@ -12,6 +12,20 @@ Installation
 make install
 ```
 
+Test
+----
+
+```
+make test
+```
+
+Documentation
+----
+
+```
+make documentation
+```
+
 Dependances
 ----
 

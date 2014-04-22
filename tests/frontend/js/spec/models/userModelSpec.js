@@ -21,14 +21,63 @@
       self = this;
       before(function() {
         self.userModel = new UserModel({
-          username: "lambda"
+          username: "lambda",
+          password: "      ",
+          email: "lambda@user.com"
         });
         return self.user = new User({
           model: self.userModel
         });
       });
-      return it("should initialize the user", function() {
-        return self.user.model.get("username").should.equal("lambda");
+      it("should initialize the user", function() {
+        self.user.model.get("username").should.equal("lambda");
+        this.pwd = self.user.model.get("password").replace(/^\s+|\s+$/g, "");
+        this.pwd.should.equal("");
+        return self.user.model.get("email").should.equal("lambda@user.com");
+      });
+      return describe("Validation", function() {
+        it("should return false if non-valid username", function() {
+          this.userModel = new UserModel({
+            username: "w"
+          });
+          this.user = new User({
+            model: this.userModel
+          });
+          this.saving = this.userModel.save();
+          return this.saving.should.be["false"];
+        });
+        it("should return false if non-valid password", function() {
+          this.userModel = new UserModel({
+            password: "w"
+          });
+          this.user = new User({
+            model: this.userModel
+          });
+          this.saving = this.userModel.save();
+          return this.saving.should.be["false"];
+        });
+        it("should return false if non-valid email", function() {
+          this.userModel = new UserModel({
+            email: "notvalid"
+          });
+          this.user = new UserModel({
+            model: this.userModel
+          });
+          this.saving = this.userModel.save();
+          return this.saving.should.be["false"];
+        });
+        return it("should not be false if everything valid", function() {
+          this.userModel = new UserModel({
+            username: "lambda",
+            password: "      ",
+            email: "lambda@user.com"
+          });
+          this.user = new User({
+            model: this.userModel
+          });
+          this.saving = this.userModel.save();
+          return this.saving.should.not.be["false"];
+        });
       });
     });
   }));

@@ -42,7 +42,7 @@
     return window.should = Chai.should();
   }));
 
-  require(["spec/models/userModelSpec"], (function(UserModelSpec) {
+  require(["spec/models/userModelSpec", "spec/models/giftModelSpec", "spec/models/searchModelSpec", "spec/models/searchUserModelSpec", "spec/models/searchGiftModelSpec"], (function(UserModelSpec, GiftModelSpec, SearchModelSpec, SearchUserModelSpec, SearchGiftModel) {
     if (window.mochaPhantomJS != null) {
       return mochaPhantomJS.run();
     } else {

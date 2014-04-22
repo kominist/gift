@@ -45,8 +45,16 @@ require [
 # Run tests
 require [
   "spec/models/userModelSpec"
+  "spec/models/giftModelSpec"
+  "spec/models/searchModelSpec"
+  "spec/models/searchUserModelSpec"
+  "spec/models/searchGiftModelSpec"
 ], ((
   UserModelSpec
+  GiftModelSpec
+  SearchModelSpec
+  SearchUserModelSpec
+  SearchGiftModel
 ) ->
   if window.mochaPhantomJS?
     mochaPhantomJS.run()
